@@ -12,10 +12,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Solid color Navigation bar
-    UIImage *color = [UIImage imageNamed:@"alizarin"];
-    [[UINavigationBar appearance] setBackgroundImage:color forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setBackgroundImage:color forBarMetrics:UIBarMetricsLandscapePhone];
+    
+    [NUISettings initWithStylesheet:@"Lunch"];
     
     return YES;
 }

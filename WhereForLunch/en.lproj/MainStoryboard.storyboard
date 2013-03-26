@@ -55,7 +55,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNn-a1-GOz">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="ydx-Od-Q4q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,12 +88,83 @@
                                     <navigationItem title="Get Lunch!" id="KgB-eu-wCn"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wc-lQ-VRS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="wZL-7i-asI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Open in Yelp">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xc-q7-8Zv">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Favorite">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nuiClass" value="secondaryButton"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59J-DX-9HU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="dpL-k0-iDk"/>
+                                    <constraint firstAttribute="width" constant="136" id="oxZ-ye-M3k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Ate Today">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nuiClass" value="secondaryButton"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tij-mS-nHw">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ai-j9-Nuk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DdW-GV-J48"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6wc-lQ-VRS" secondAttribute="bottom" constant="22" id="0D0-VC-FRK"/>
+                            <constraint firstItem="tij-mS-nHw" firstAttribute="leading" secondItem="zPB-Gt-kht" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A1P-Tk-oRp"/>
+                            <constraint firstItem="59J-DX-9HU" firstAttribute="leading" secondItem="zPB-Gt-kht" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BkI-w4-6ej"/>
+                            <constraint firstItem="6wc-lQ-VRS" firstAttribute="top" secondItem="0Xc-q7-8Zv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="C8s-83-R7M"/>
+                            <constraint firstAttribute="trailing" secondItem="6wc-lQ-VRS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Edy-fg-inJ"/>
+                            <constraint firstItem="0Xc-q7-8Zv" firstAttribute="leading" secondItem="59J-DX-9HU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IyQ-TN-aV2"/>
+                            <constraint firstItem="6wc-lQ-VRS" firstAttribute="top" secondItem="59J-DX-9HU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PNb-Pp-jkI"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ai-j9-Nuk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Pzd-kg-bdU"/>
                             <constraint firstItem="SJ5-ce-vIN" firstAttribute="leading" secondItem="zPB-Gt-kht" secondAttribute="leading" type="default" id="Yhj-n0-i7P"/>
+                            <constraint firstItem="0Ai-j9-Nuk" firstAttribute="leading" secondItem="zPB-Gt-kht" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zef-Hs-oOc"/>
+                            <constraint firstItem="0Ai-j9-Nuk" firstAttribute="top" secondItem="zPB-Gt-kht" secondAttribute="top" constant="76" id="ZhG-5z-upa"/>
+                            <constraint firstItem="6wc-lQ-VRS" firstAttribute="leading" secondItem="zPB-Gt-kht" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aoj-L0-myz"/>
+                            <constraint firstAttribute="trailing" secondItem="tij-mS-nHw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cIb-uY-tWU"/>
+                            <constraint firstAttribute="trailing" secondItem="0Xc-q7-8Zv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gqe-9w-J2R"/>
                             <constraint firstItem="SJ5-ce-vIN" firstAttribute="trailing" secondItem="zPB-Gt-kht" secondAttribute="trailing" type="default" id="oPv-T8-5KH"/>
+                            <constraint firstItem="tij-mS-nHw" firstAttribute="top" secondItem="zPB-Gt-kht" secondAttribute="top" constant="55" id="qec-cL-ZcJ"/>
                             <constraint firstItem="SJ5-ce-vIN" firstAttribute="top" secondItem="zPB-Gt-kht" secondAttribute="top" type="default" id="uLu-f3-gig"/>
+                            <constraint firstItem="0Xc-q7-8Zv" firstAttribute="top" secondItem="59J-DX-9HU" secondAttribute="top" type="default" id="ufy-va-zBR"/>
                         </constraints>
                     </view>
                     <connections>
