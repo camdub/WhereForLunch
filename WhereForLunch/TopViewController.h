@@ -10,6 +10,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 
 @interface TopViewController : UIViewController
 

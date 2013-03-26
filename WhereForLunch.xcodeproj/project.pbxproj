@@ -31,6 +31,8 @@
 		F07F3B3D16FE609D00A51A65 /* alizarin.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B3B16FE609D00A51A65 /* alizarin.png */; };
 		F07F3B3E16FE609D00A51A65 /* alizarin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B3C16FE609D00A51A65 /* alizarin@2x.png */; };
 		F07F3B40170130C300A51A65 /* Lunch.nss in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B3F170130C300A51A65 /* Lunch.nss */; };
+		F07F3B421701400400A51A65 /* menuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B411701400400A51A65 /* menuButton@2x.png */; };
+		F07F3B441701421900A51A65 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B431701421900A51A65 /* menuButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		F07F3B3B16FE609D00A51A65 /* alizarin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alizarin.png; sourceTree = SOURCE_ROOT; };
 		F07F3B3C16FE609D00A51A65 /* alizarin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alizarin@2x.png"; sourceTree = SOURCE_ROOT; };
 		F07F3B3F170130C300A51A65 /* Lunch.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lunch.nss; sourceTree = "<group>"; };
+		F07F3B411701400400A51A65 /* menuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuButton@2x.png"; sourceTree = "<group>"; };
+		F07F3B431701421900A51A65 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 		F07F3AF516FE3E2200A51A65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F07F3B431701421900A51A65 /* menuButton.png */,
+				F07F3B411701400400A51A65 /* menuButton@2x.png */,
 				F07F3B3F170130C300A51A65 /* Lunch.nss */,
 				F07F3B3B16FE609D00A51A65 /* alizarin.png */,
 				F07F3B3C16FE609D00A51A65 /* alizarin@2x.png */,
@@ -279,6 +285,8 @@
 				F07F3B3D16FE609D00A51A65 /* alizarin.png in Resources */,
 				F07F3B3E16FE609D00A51A65 /* alizarin@2x.png in Resources */,
 				F07F3B40170130C300A51A65 /* Lunch.nss in Resources */,
+				F07F3B421701400400A51A65 /* menuButton@2x.png in Resources */,
+				F07F3B441701421900A51A65 /* menuButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

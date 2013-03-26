@@ -12,5 +12,6 @@
 @interface LunchViewController : TopViewController
 
 @property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (strong, nonatomic) UIBarButtonItem *menuBtn;
 
 @end

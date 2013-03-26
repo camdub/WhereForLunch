@@ -7,6 +7,7 @@
 //
 
 #import "LunchViewController.h"
+#import "NUIRenderer.h"
 
 @interface LunchViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation LunchViewController
 
-@synthesize navigationBar;
+@synthesize navigationBar, menuBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +29,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.menuBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"] style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
+
+    navigationBar.topItem.leftBarButtonItem = menuBtn;
+}
+
+- (IBAction) revealMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    // the styles are lost when the controllers transition, programmatically reset them
+    [NUIRenderer renderNavigationBar:navigationBar withClass:@"TopBar"];
 }
 
 - (void)didReceiveMemoryWarning

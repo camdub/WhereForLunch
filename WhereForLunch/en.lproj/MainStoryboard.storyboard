@@ -87,6 +87,9 @@
                                 <items>
                                     <navigationItem title="Get Lunch!" id="KgB-eu-wCn"/>
                                 </items>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nuiClass" value="TopBar"/>
+                                </userDefinedRuntimeAttributes>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wc-lQ-VRS">
                                 <constraints>
@@ -186,6 +189,7 @@
         <class className="LunchViewController" superclassName="TopViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LunchViewController.h"/>
             <relationships>
+                <relationship kind="action" name="revealMenu:"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
             </relationships>
         </class>
