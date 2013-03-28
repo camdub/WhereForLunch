@@ -14,9 +14,6 @@
 		F07F3AF916FE3E2200A51A65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F07F3AF716FE3E2200A51A65 /* InfoPlist.strings */; };
 		F07F3AFB16FE3E2200A51A65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F07F3AFA16FE3E2200A51A65 /* main.m */; };
 		F07F3AFF16FE3E2200A51A65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F07F3AFE16FE3E2200A51A65 /* AppDelegate.m */; };
-		F07F3B0116FE3E2200A51A65 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B0016FE3E2200A51A65 /* Default.png */; };
-		F07F3B0316FE3E2200A51A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B0216FE3E2200A51A65 /* Default@2x.png */; };
-		F07F3B0516FE3E2200A51A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B0416FE3E2200A51A65 /* Default-568h@2x.png */; };
 		F07F3B0816FE3E2200A51A65 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B0616FE3E2200A51A65 /* MainStoryboard.storyboard */; };
 		F07F3B1316FE3E2200A51A65 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07F3B1216FE3E2200A51A65 /* SenTestingKit.framework */; };
 		F07F3B1416FE3E2200A51A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07F3AEE16FE3E2200A51A65 /* UIKit.framework */; };
@@ -58,9 +55,6 @@
 		F07F3AFC16FE3E2200A51A65 /* WhereForLunch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereForLunch-Prefix.pch"; sourceTree = "<group>"; };
 		F07F3AFD16FE3E2200A51A65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F07F3AFE16FE3E2200A51A65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F07F3B0016FE3E2200A51A65 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F07F3B0216FE3E2200A51A65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F07F3B0416FE3E2200A51A65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F07F3B0716FE3E2200A51A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F07F3B1116FE3E2200A51A65 /* WhereForLunchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereForLunchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07F3B1216FE3E2200A51A65 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -148,20 +142,13 @@
 		F07F3AF416FE3E2200A51A65 /* WhereForLunch */ = {
 			isa = PBXGroup;
 			children = (
+				F07F3B471703C03F00A51A65 /* Controllers */,
+				F07F3B461703C03900A51A65 /* Models */,
+				F07F3B451703C00A00A51A65 /* Resources */,
 				F07F3AFD16FE3E2200A51A65 /* AppDelegate.h */,
 				F07F3AFE16FE3E2200A51A65 /* AppDelegate.m */,
 				F07F3B0616FE3E2200A51A65 /* MainStoryboard.storyboard */,
 				F07F3AF516FE3E2200A51A65 /* Supporting Files */,
-				F07F3B2916FE432C00A51A65 /* InitViewController.h */,
-				F07F3B2A16FE432C00A51A65 /* InitViewController.m */,
-				F07F3B2C16FE444B00A51A65 /* MenuViewController.h */,
-				F07F3B2D16FE444B00A51A65 /* MenuViewController.m */,
-				F07F3B2F16FE44E300A51A65 /* LunchViewController.h */,
-				F07F3B3016FE44E300A51A65 /* LunchViewController.m */,
-				F07F3B3216FE459800A51A65 /* SettingsViewController.h */,
-				F07F3B3316FE459800A51A65 /* SettingsViewController.m */,
-				F07F3B3516FE4C2200A51A65 /* TopViewController.h */,
-				F07F3B3616FE4C2200A51A65 /* TopViewController.m */,
 			);
 			path = WhereForLunch;
 			sourceTree = "<group>";
@@ -169,18 +156,10 @@
 		F07F3AF516FE3E2200A51A65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F07F3B431701421900A51A65 /* menuButton.png */,
-				F07F3B411701400400A51A65 /* menuButton@2x.png */,
-				F07F3B3F170130C300A51A65 /* Lunch.nss */,
-				F07F3B3B16FE609D00A51A65 /* alizarin.png */,
-				F07F3B3C16FE609D00A51A65 /* alizarin@2x.png */,
 				F07F3AF616FE3E2200A51A65 /* WhereForLunch-Info.plist */,
 				F07F3AF716FE3E2200A51A65 /* InfoPlist.strings */,
 				F07F3AFA16FE3E2200A51A65 /* main.m */,
 				F07F3AFC16FE3E2200A51A65 /* WhereForLunch-Prefix.pch */,
-				F07F3B0016FE3E2200A51A65 /* Default.png */,
-				F07F3B0216FE3E2200A51A65 /* Default@2x.png */,
-				F07F3B0416FE3E2200A51A65 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,6 +181,42 @@
 				F07F3B1B16FE3E2200A51A65 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F07F3B451703C00A00A51A65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F07F3B431701421900A51A65 /* menuButton.png */,
+				F07F3B411701400400A51A65 /* menuButton@2x.png */,
+				F07F3B3F170130C300A51A65 /* Lunch.nss */,
+				F07F3B3B16FE609D00A51A65 /* alizarin.png */,
+				F07F3B3C16FE609D00A51A65 /* alizarin@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F07F3B461703C03900A51A65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F07F3B471703C03F00A51A65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F07F3B2916FE432C00A51A65 /* InitViewController.h */,
+				F07F3B2A16FE432C00A51A65 /* InitViewController.m */,
+				F07F3B2C16FE444B00A51A65 /* MenuViewController.h */,
+				F07F3B2D16FE444B00A51A65 /* MenuViewController.m */,
+				F07F3B2F16FE44E300A51A65 /* LunchViewController.h */,
+				F07F3B3016FE44E300A51A65 /* LunchViewController.m */,
+				F07F3B3216FE459800A51A65 /* SettingsViewController.h */,
+				F07F3B3316FE459800A51A65 /* SettingsViewController.m */,
+				F07F3B3516FE4C2200A51A65 /* TopViewController.h */,
+				F07F3B3616FE4C2200A51A65 /* TopViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +293,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F07F3AF916FE3E2200A51A65 /* InfoPlist.strings in Resources */,
-				F07F3B0116FE3E2200A51A65 /* Default.png in Resources */,
-				F07F3B0316FE3E2200A51A65 /* Default@2x.png in Resources */,
-				F07F3B0516FE3E2200A51A65 /* Default-568h@2x.png in Resources */,
 				F07F3B0816FE3E2200A51A65 /* MainStoryboard.storyboard in Resources */,
 				F07F3B3D16FE609D00A51A65 /* alizarin.png in Resources */,
 				F07F3B3E16FE609D00A51A65 /* alizarin@2x.png in Resources */,
