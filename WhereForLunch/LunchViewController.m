@@ -29,10 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.menuBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"] style:UIBarButtonItemStylePlain target:self action:@selector(revealMenu:)];
-
-    navigationBar.topItem.leftBarButtonItem = menuBtn;
 }
 
 - (IBAction) revealMenu:(id)sender

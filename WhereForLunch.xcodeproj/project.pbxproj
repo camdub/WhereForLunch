@@ -142,9 +142,9 @@
 		F07F3AF416FE3E2200A51A65 /* WhereForLunch */ = {
 			isa = PBXGroup;
 			children = (
+				F07F3B451703C00A00A51A65 /* Resources */,
 				F07F3B471703C03F00A51A65 /* Controllers */,
 				F07F3B461703C03900A51A65 /* Models */,
-				F07F3B451703C00A00A51A65 /* Resources */,
 				F07F3AFD16FE3E2200A51A65 /* AppDelegate.h */,
 				F07F3AFE16FE3E2200A51A65 /* AppDelegate.m */,
 				F07F3B0616FE3E2200A51A65 /* MainStoryboard.storyboard */,
