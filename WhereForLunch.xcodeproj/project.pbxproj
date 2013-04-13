@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A3B31A0DA3384DA0BD4AA4FC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98830E236BB9434DBFC5BF53 /* libPods.a */; };
+		F02AF9EB17189EB7002ED43C /* MappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F02AF9E817189EB7002ED43C /* MappingProvider.m */; };
+		F02AF9EC17189EB7002ED43C /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = F02AF9EA17189EB7002ED43C /* Venue.m */; };
+		F02AF9EE17189ED2002ED43C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F02AF9ED17189ED2002ED43C /* CoreLocation.framework */; };
+		F02AF9F117189EF2002ED43C /* RKMappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F02AF9F017189EF2002ED43C /* RKMappingTest.m */; };
+		F02AF9F417189FA4002ED43C /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = F02AF9F317189FA4002ED43C /* venues.json */; };
 		F07F3AEF16FE3E2200A51A65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07F3AEE16FE3E2200A51A65 /* UIKit.framework */; };
 		F07F3AF116FE3E2200A51A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07F3AF016FE3E2200A51A65 /* Foundation.framework */; };
 		F07F3AF316FE3E2200A51A65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07F3AF216FE3E2200A51A65 /* CoreGraphics.framework */; };
@@ -45,6 +50,14 @@
 /* Begin PBXFileReference section */
 		98830E236BB9434DBFC5BF53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2E8C8B294849A797D1C88A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F02AF9E717189EB7002ED43C /* MappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingProvider.h; sourceTree = "<group>"; };
+		F02AF9E817189EB7002ED43C /* MappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingProvider.m; sourceTree = "<group>"; };
+		F02AF9E917189EB7002ED43C /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		F02AF9EA17189EB7002ED43C /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		F02AF9ED17189ED2002ED43C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F02AF9EF17189EF2002ED43C /* RKMappingTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKMappingTest.h; sourceTree = "<group>"; };
+		F02AF9F017189EF2002ED43C /* RKMappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKMappingTest.m; sourceTree = "<group>"; };
+		F02AF9F317189FA4002ED43C /* venues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = venues.json; sourceTree = "<group>"; };
 		F07F3AEB16FE3E2200A51A65 /* WhereForLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereForLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07F3AEE16FE3E2200A51A65 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F07F3AF016FE3E2200A51A65 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02AF9EE17189ED2002ED43C /* CoreLocation.framework in Frameworks */,
 				F07F3AEF16FE3E2200A51A65 /* UIKit.framework in Frameworks */,
 				F07F3AF116FE3E2200A51A65 /* Foundation.framework in Frameworks */,
 				F07F3AF316FE3E2200A51A65 /* CoreGraphics.framework in Frameworks */,
@@ -104,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F02AF9F217189F50002ED43C /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				F02AF9F317189FA4002ED43C /* venues.json */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		F07F3AE216FE3E2200A51A65 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +152,7 @@
 		F07F3AED16FE3E2200A51A65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F02AF9ED17189ED2002ED43C /* CoreLocation.framework */,
 				F07F3AEE16FE3E2200A51A65 /* UIKit.framework */,
 				F07F3AF016FE3E2200A51A65 /* Foundation.framework */,
 				F07F3AF216FE3E2200A51A65 /* CoreGraphics.framework */,
@@ -167,9 +190,12 @@
 		F07F3B1816FE3E2200A51A65 /* WhereForLunchTests */ = {
 			isa = PBXGroup;
 			children = (
+				F02AF9F217189F50002ED43C /* Fixtures */,
 				F07F3B1E16FE3E2200A51A65 /* WhereForLunchTests.h */,
 				F07F3B1F16FE3E2200A51A65 /* WhereForLunchTests.m */,
 				F07F3B1916FE3E2200A51A65 /* Supporting Files */,
+				F02AF9EF17189EF2002ED43C /* RKMappingTest.h */,
+				F02AF9F017189EF2002ED43C /* RKMappingTest.m */,
 			);
 			path = WhereForLunchTests;
 			sourceTree = "<group>";
@@ -198,6 +224,10 @@
 		F07F3B461703C03900A51A65 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F02AF9E717189EB7002ED43C /* MappingProvider.h */,
+				F02AF9E817189EB7002ED43C /* MappingProvider.m */,
+				F02AF9E917189EB7002ED43C /* Venue.h */,
+				F02AF9EA17189EB7002ED43C /* Venue.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -307,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F07F3B1D16FE3E2200A51A65 /* InfoPlist.strings in Resources */,
+				F02AF9F417189FA4002ED43C /* venues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +399,8 @@
 				F07F3B3116FE44E300A51A65 /* LunchViewController.m in Sources */,
 				F07F3B3416FE459800A51A65 /* SettingsViewController.m in Sources */,
 				F07F3B3716FE4C2200A51A65 /* TopViewController.m in Sources */,
+				F02AF9EB17189EB7002ED43C /* MappingProvider.m in Sources */,
+				F02AF9EC17189EB7002ED43C /* Venue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F07F3B2016FE3E2200A51A65 /* WhereForLunchTests.m in Sources */,
+				F02AF9F117189EF2002ED43C /* RKMappingTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,12 +563,14 @@
 		};
 		F07F3B2716FE3E2200A51A65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE2E8C8B294849A797D1C88A /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WhereForLunch.app/WhereForLunch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WhereForLunch/WhereForLunch-Prefix.pch";
 				INFOPLIST_FILE = "WhereForLunchTests/WhereForLunchTests-Info.plist";

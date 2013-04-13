@@ -7,6 +7,10 @@
 //
 
 #import "WhereForLunchTests.h"
+#import <RestKit/RestKit.h>
+#import <RestKit/Testing.h>
+#import "MappingProvider.h"
+#import "Venue.h"
 
 @implementation WhereForLunchTests
 
@@ -15,6 +19,8 @@
     [super setUp];
     
     // Set-up code here.
+    NSBundle *testBundle = [NSBundle bundleWithIdentifier:@"com.cwoodmansee.WhereForLunchTests"];
+    [RKTestFixture setFixtureBundle:testBundle];
 }
 
 - (void)tearDown
@@ -26,7 +32,8 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in WhereForLunchTests");
+    id json = [RKTestFixture parsedObjectWithContentsOfFixture:@"venues.json"];
+    RKMappingTest *test = [RKMappingTest testWith]
 }
 
 @end

@@ -7,6 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import <RestKit/RestKit.h>
+#import "MappingProvider.h"
+#import "Venue.h"
+#import <GCOAuth.h>
+
+#define CONSUMER_KEY @"0ALRLtLH-iF4R07jOXLupQ"
+#define CONSUMER_SECRET @"AMzJgOLZotHaq02YUyfUX3J0dPk"
+#define TOKEN @"bqfyQdTxPHwU5-VjwJLvQiqMu5-so0MF"
+#define TOKENSECRET @"kYOtKQU3krIFSjY8mNIkKlHV0_s"
 
 @implementation AppDelegate
 
@@ -14,6 +23,23 @@
 {
     
     [NUISettings initWithStylesheet:@"Lunch"];
+    
+    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+    RKMapping *mapping = [MappingProvider venueMapping];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:@"/v2/search" keyPath:@"businesses" statusCodes:statusCodes];
+    
+    NSURLRequest *request = [GCOAuth URLRequestForPath:@"api.yelp.com/v2/search" GETParameters:@{ @"term" : @"food", @"location" : @"San Francisco" } host:@"" consumerKey:CONSUMER_KEY consumerSecret:CONSUMER_SECRET accessToken:TOKEN tokenSecret:TOKENSECRET];
+    
+    RKObjectRequestOperation *rkoperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+    
+    [rkoperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSArray *venues = mappingResult.array;
+        NSLog(@"%d", [venues count]);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"Error");
+    }];
+    
+    [rkoperation start];
     
     return YES;
 }
