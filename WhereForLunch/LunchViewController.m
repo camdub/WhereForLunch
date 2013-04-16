@@ -8,6 +8,7 @@
 
 #import "LunchViewController.h"
 #import <NUIRenderer.h>
+#import <SVProgressHUD.h>
 #import "VenueManager.h"
 
 @interface LunchViewController ()
@@ -46,13 +47,27 @@
 {
     CLLocation *location = [locations lastObject];
     
-    // Do stuff with location
+    // update current location
     NSDate *eventDate = location.timestamp;
     if (abs([eventDate timeIntervalSinceNow]) > 15.0) {
         [_locationManager stopUpdatingLocation];
         [[VenueManager sharedVenueManager] updateLocationWithLocation:location];
-        [[VenueManager sharedVenueManager] updateVenues];
     }
+    
+    // Kick off RestKit request not on the main queue
+    [SVProgressHUD show];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        [[VenueManager sharedVenueManager] updateVenues];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadVenue) name:@"venuesLoaded" object:nil];
+    });
+}
+
+- (void)loadVenue
+{
+    [SVProgressHUD dismiss];
+    _currentVenue = [[[VenueManager sharedVenueManager] currentVenues] anyObject];
+    _titleLabel.text = _currentVenue.name;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -82,4 +97,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setTitleLabel:nil];
+    [self setCategoriesLabel:nil];
+    [super viewDidUnload];
+}
 @end

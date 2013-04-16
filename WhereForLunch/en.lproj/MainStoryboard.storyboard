@@ -177,7 +177,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoriesLabel" destination="0Ai-j9-Nuk" id="nDw-dM-c0D"/>
                         <outlet property="navigationBar" destination="SJ5-ce-vIN" id="OIY-D2-E12"/>
+                        <outlet property="titleLabel" destination="tij-mS-nHw" id="Fd2-t8-Hny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVZ-Sw-H6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,7 +201,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LunchViewController.h"/>
             <relationships>
                 <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="categoriesLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MenuViewController" superclassName="UITableViewController">

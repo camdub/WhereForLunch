@@ -37,6 +37,7 @@
 		F07F3B40170130C300A51A65 /* Lunch.nss in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B3F170130C300A51A65 /* Lunch.nss */; };
 		F07F3B421701400400A51A65 /* menuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B411701400400A51A65 /* menuButton@2x.png */; };
 		F07F3B441701421900A51A65 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F07F3B431701421900A51A65 /* menuButton.png */; };
+		F0D88E6C171D9172001E86AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D88E6B171D9172001E86AD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F07F3B3F170130C300A51A65 /* Lunch.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lunch.nss; sourceTree = "<group>"; };
 		F07F3B411701400400A51A65 /* menuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuButton@2x.png"; sourceTree = "<group>"; };
 		F07F3B431701421900A51A65 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		F0D88E6B171D9172001E86AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D88E6C171D9172001E86AD /* QuartzCore.framework in Frameworks */,
 				F02AF9EE17189ED2002ED43C /* CoreLocation.framework in Frameworks */,
 				F07F3AEF16FE3E2200A51A65 /* UIKit.framework in Frameworks */,
 				F07F3AF116FE3E2200A51A65 /* Foundation.framework in Frameworks */,
@@ -157,6 +160,7 @@
 		F07F3AED16FE3E2200A51A65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0D88E6B171D9172001E86AD /* QuartzCore.framework */,
 				F02AF9ED17189ED2002ED43C /* CoreLocation.framework */,
 				F07F3AEE16FE3E2200A51A65 /* UIKit.framework */,
 				F07F3AF016FE3E2200A51A65 /* Foundation.framework */,

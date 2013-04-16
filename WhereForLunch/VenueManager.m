@@ -7,6 +7,7 @@
 //
 
 #import "VenueManager.h"
+#import <SVProgressHUD.h>
 
 #define _ Underscore
 
@@ -70,6 +71,7 @@
         } else {
             _currentVenues = [_currentVenues setByAddingObjectsFromArray:mappingResult.array];
         }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"venuesLoaded" object:self];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", [error localizedDescription]);
     }];
