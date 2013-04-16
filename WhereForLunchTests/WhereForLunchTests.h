@@ -7,7 +7,10 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "Venue.h"
 
 @interface WhereForLunchTests : SenTestCase
+
+@property (strong,nonatomic) Venue *venue;
 
 @end

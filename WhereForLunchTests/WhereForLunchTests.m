@@ -19,8 +19,8 @@
     [super setUp];
     
     // Set-up code here.
-    NSBundle *testBundle = [NSBundle bundleWithIdentifier:@"com.cwoodmansee.WhereForLunchTests"];
-    [RKTestFixture setFixtureBundle:testBundle];
+    _venue = [[Venue alloc] init];
+    _venue.categories = @[ @[@"Local Flavor", @"localflavor"], @[@"Mass Media", @"massmedia"] ];
 }
 
 - (void)tearDown
@@ -30,10 +30,11 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testFormattedCategories
 {
-    id json = [RKTestFixture parsedObjectWithContentsOfFixture:@"venues.json"];
-    RKMappingTest *test = [RKMappingTest testWith]
+    NSString *formattedCategories = [_venue formattedCategories];
+    STAssertTrue([formattedCategories isEqualToString:@"Local Flavor, Mass Media"], @"categories formatted incorrectly");
+    
 }
 
 @end

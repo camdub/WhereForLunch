@@ -41,7 +41,7 @@
     
 }
 
-#pragma mark Core Location Delagate
+#pragma mark Core Location Delagate and Venue load
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
@@ -68,6 +68,7 @@
     [SVProgressHUD dismiss];
     _currentVenue = [[[VenueManager sharedVenueManager] currentVenues] anyObject];
     _titleLabel.text = _currentVenue.name;
+    _categoriesLabel.text = _currentVenue.formattedCategories;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error

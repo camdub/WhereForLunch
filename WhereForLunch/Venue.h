@@ -20,5 +20,6 @@
 @property (nonatomic, strong) NSArray *categories;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readonly, getter = formattedCategories) NSString *formattedCategories;
 
 @end
