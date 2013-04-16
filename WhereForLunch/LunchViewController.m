@@ -7,15 +7,14 @@
 //
 
 #import "LunchViewController.h"
-#import "NUIRenderer.h"
+#import <NUIRenderer.h>
+#import "VenueManager.h"
 
 @interface LunchViewController ()
 
 @end
 
 @implementation LunchViewController
-
-@synthesize navigationBar, menuBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,17 +28,52 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // setup core location
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    _locationManager.distanceFilter = 500.0f;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.pausesLocationUpdatesAutomatically = NO;
+    if([CLLocationManager locationServicesEnabled])
+        [_locationManager startUpdatingLocation];
+    
 }
+
+#pragma mark Core Location Delagate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *location = [locations lastObject];
+    
+    // Do stuff with location
+    NSDate *eventDate = location.timestamp;
+    if (abs([eventDate timeIntervalSinceNow]) > 15.0) {
+        [_locationManager stopUpdatingLocation];
+        [[VenueManager sharedVenueManager] updateLocationWithLocation:location];
+        [[VenueManager sharedVenueManager] updateVenues];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Location Error: %@", error);
+    //TODO better error handling (user interaction)
+}
+
+#pragma mark IB Methods
 
 - (IBAction) revealMenu:(id)sender
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
+#pragma mark Lifecycle methods
+
 - (void) viewDidAppear:(BOOL)animated
 {
     // the styles are lost when the controllers transition, programmatically reset them
-    [NUIRenderer renderNavigationBar:navigationBar withClass:@"TopBar"];
+    [NUIRenderer renderNavigationBar:_navigationBar withClass:@"TopBar"];
 }
 
 - (void)didReceiveMemoryWarning
